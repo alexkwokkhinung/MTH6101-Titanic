@@ -3,7 +3,7 @@ source("R/00_setup.R")
 
 #Upload dataset to R
 
-train <- read.csv("data/train.csv") # uploads csv table to r to use
+train <- read.csv("train.csv") # uploads csv table to r to use
 str(train) # structure of the table each col data type etc
 summary(train) # some stats from the table like number of NA's (All in Age)
 nrow(train) # number of rows in the table train
