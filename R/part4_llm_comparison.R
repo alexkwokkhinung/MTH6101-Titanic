@@ -1,8 +1,12 @@
 source("R/00_setup.R")
+source("R/part2_reduced_model.R")
 source("R/part3_llm_classifier.R")
 #add code below
 
 #part iv
+selected_passengers <- chosen
+LLM_pred <- responses$llm_prediction
+sum(new_clean$PassengerId[selected_passengers]==cases$PassengerId)==30
 
 #actual survival outcomes for the passengers
 outcomes <- new_clean$Survived[selected_passengers]
