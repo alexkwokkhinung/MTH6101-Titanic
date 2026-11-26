@@ -39,3 +39,21 @@ train_final$Cluster5 <- clusters5
 table(train_final$Cluster5, train_final$Survived)
 survival_prop5 <- prop.table(table(train_final$Cluster5, train_final$Survived), margin=1)*100
 survival_prop5
+
+# Compare mean values across all 4 clusters
+aggregate(
+  cbind(
+    Female = train_final$Sex,
+    Pclass1 = train_final$Pclass1,
+    Pclass2 = train_final$Pclass2,
+    Pclass3 = train_final$Pclass3,
+    Age = train_clean$Age,
+    SibSp = train_clean$SibSp,
+    Parch = train_clean$Parch,
+    Fare = train_clean$Fare,
+    Survived = train_clean$Survived
+  ) ~ Cluster4,
+  data = train_final,
+  FUN = mean
+)
+
