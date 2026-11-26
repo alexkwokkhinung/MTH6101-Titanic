@@ -1,8 +1,6 @@
 source("R/00_setup.R")
 source("R/part1_cleaning_eda_full_model.R")
 #add code below
-###### remove rows with missing entries from everything or just from the predictior vars?
-
 library("cluster")
 
 # making new dataset with dummy variables and standardised variables
